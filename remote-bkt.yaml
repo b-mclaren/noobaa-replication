@@ -1,0 +1,13 @@
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: remote-bucket
+  namespace: bmclaren
+spec:
+  additionalConfig:
+    bucketclass: noobaa-default-bucket-class
+  bucketName: remote-bucket-a9e86b0e-31c9-44f5-87c1-76d8332f9158
+  generateBucketName: remote-bucket
+  objectBucketName: obc-bmclaren-remote-bucket
+  storageClassName: openshift-storage.noobaa.io
+

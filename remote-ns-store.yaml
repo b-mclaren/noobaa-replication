@@ -1,0 +1,15 @@
+apiVersion: noobaa.io/v1alpha1
+kind: NamespaceStore
+metadata:
+  name: remote-ns-store
+  namespace: openshift-storage
+  labels:
+    app: noobaa
+spec:
+  s3Compatible:
+    endpoint: https://s3-openshift-storage.apps.stg-remote.openinfra.lab
+    secret:
+      name: remote-bucket-secret
+      namespace: openshift-storage
+    targetBucket: remote-bucket-a9e86b0e-31c9-44f5-87c1-76d8332f9158
+  type: s3-compatible

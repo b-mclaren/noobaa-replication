@@ -1,0 +1,15 @@
+apiVersion: noobaa.io/v1alpha1
+kind: NamespaceStore
+metadata:
+  name: local-ns-store
+  namespace: openshift-storage
+  labels:
+    app: noobaa
+spec:
+  s3Compatible:
+    endpoint: 'https://s3-openshift-storage.apps.stg-local.openinfra.lab'
+    secret:
+      name: local-bucket-secret
+      namespace: openshift-storage
+    targetBucket: local-bkt-b366176f-bc3c-4317-9c62-90e2d1ff9a62
+  type: s3-compatible

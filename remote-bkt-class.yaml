@@ -1,0 +1,12 @@
+apiVersion: noobaa.io/v1alpha1
+kind: BucketClass
+metadata:
+  name: remote-bkt-class
+  namespace: openshift-storage
+  labels:
+    app: noobaa
+spec:
+  namespacePolicy:
+    single:
+      resource: remote-ns-store
+    type: Single

@@ -1,0 +1,12 @@
+apiVersion: noobaa.io/v1alpha1
+kind: BucketClass
+metadata:
+  name: local-bkt-class
+  namespace: openshift-storage
+  labels:
+    app: noobaa
+spec:
+  namespacePolicy:
+    single:
+      resource: local-ns-store
+    type: Single
