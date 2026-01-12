@@ -12,4 +12,4 @@ oc logs noobaa-core-0 -n openshift-storage | grep "replication" | tail -10
 oc logs noobaa-core-0 -n openshift-storage --tail=200 | grep -iE "error|warn|exception|reject"
 
 # Upload file:
-aws s3 --endpoint-url http://<s3endPoint> --profile <profileName> cp <fileName> s3://<bucketName>
+aws s3 --endpoint-url http://\<s3endPoint\> --profile \<profileName\> cp \<fileName\> s3://\<bucketName\>
